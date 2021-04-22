@@ -1,3 +1,4 @@
-n_list = [2, 3, 1, 4]
-print(sorted(n_list, reverse=True))
-print(n_list)
+list = ['a', 'b', 'c']
+
+result = "_".join(list)
+print(result)
