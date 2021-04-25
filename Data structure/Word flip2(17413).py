@@ -1,31 +1,27 @@
 n_list = input()
 
-flag = True
-m_list = []
+flag = False
+m_word = ''
+re_str = ''
 
 for i in n_list:
-    if i == '<':
-        flag = False
-    if i == '>':
-        print(i, end='')
-        flag = True
-        continue
-
-    if i == ' ' or i == '<' and len(m_list) > 0 :
-        m_list.reverse()
-        print("".join(m_list), end='')
-        m_list.clear()
-
     if flag == False:
-        print(i, end='')
-    else:
-        if i != ' ':
-            m_list.append(i)
+        if i == '<':
+            re_str += i
+            flag = True
+        elif i == ' ':
+            re_str += m_word + ' '
+            m_word = ''
         else:
-            print(i, end='')
+            m_word = i + m_word
 
-if len(m_list) > 0:
-    m_list.reverse()
-    print("".join(m_list))
+    elif flag == True:
+        re_str += i
+        if i == '>':
+            tag = False
+
+print(re_str)
+
+
 
 
