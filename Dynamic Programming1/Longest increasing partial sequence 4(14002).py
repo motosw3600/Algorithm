@@ -10,18 +10,13 @@ for i in range(A):
 
 m_val = max(n_lnum)
 print(m_val)
-print(n_lnum)
 
 s_list = []
-print(s_list)
+for i in range(A - 1, -1, -1):
+    if n_lnum[i] == m_val:
+        s_list.append(n_list[i])
+        m_val -= 1
 
-for k in range(len(n_lnum)):
-    if len(s_list) > 0:
-        if n_lnum[k] 
-
-# for k in range(1, m_val + 1):
-#     for m in range(0, len(n_lnum)):
-#         if k == n_lnum[m] and s_list[k - 1] < n_list[m]:
-#             s_list.append(n_list[m])
-#             break
-
+s_list.reverse()
+for i in s_list:
+    print(i, end=' ')
