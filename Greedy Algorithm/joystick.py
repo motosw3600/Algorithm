@@ -31,5 +31,3 @@ def solution(name):
             i += right
 
     return answer
-
-solution("AZAAAZZZ")
