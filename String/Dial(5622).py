@@ -6,5 +6,4 @@ for i in S:
     for j in range(len(dial)):
         if i in dial[j]:
             d_sum += j + 3
-
 print(d_sum)
