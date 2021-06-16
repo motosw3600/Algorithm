@@ -1,24 +1,11 @@
 def solution(n, lost, reserve):
-    answer = 0
+    _reserve = [r for r in reserve if r not in lost]
+    _lost = [l for l in lost if l not in reserve]
 
-    reserve, lost = list(set(reserve) - set(lost)), list(set(lost) - set(reserve))
-    # O(n^2)
-    #     answer = n - len(lost)
+    for i in _reserve:
+        if i - 1 in _lost:
+            _lost.remove(i - 1)
+        elif i + 1 in _lost:
+            _lost.remove(i + 1)
 
-    #     for i in range(len(reserve)):
-    #         for j in range(len(lost)):
-    #             if abs(reserve[i] - lost[j]) == 1:
-    #                 answer += 1
-    #                 reserve[i] = 100
-    #                 lost[j] = 100
-
-    # O(n)
-    for i in reserve:
-        f = i + 1
-        b = i - 1
-        if b in lost:
-            lost.remove(b)
-        elif f in lost:
-            lost.remove(f)
-
-    return n - len(lost)
+    return n - len(_lost)
