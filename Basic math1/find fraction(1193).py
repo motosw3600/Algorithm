@@ -1,3 +1,6 @@
+# 분수찾기
+# 수학적 사고 필요
+# plus는 1씩 계속 더하고 first는 plus를 계속 추가
 N = int(input())
 
 first = 1

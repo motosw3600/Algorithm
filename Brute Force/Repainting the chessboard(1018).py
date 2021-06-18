@@ -1,3 +1,6 @@
+# 체스판 다시 칠하기 문제
+# brute Force로 범위를 탐색하면서 구현
+# 총 2가지 케이스를 한번에 탐색하면서 구현
 N, M = map(int, input().split())
 n_list = []
 
