@@ -1,3 +1,4 @@
+# deque 구현 V
 import sys
 from collections import deque
 N = int(input())
