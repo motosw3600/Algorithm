@@ -22,3 +22,25 @@ def solution(n, t, m, p):
         answer += candidate[i]
 
     return answer
+
+
+# def solution(n, t, m, p):
+#     answer = ''
+#     num = ''
+#     for i in range(t * m):
+#         num += change(i, n)
+#
+#     for j in range(p - 1, t * m, m):
+#         answer += num[j]
+#
+#     return answer
+#
+#
+# def change(num, n):
+#     notation = "0123456789ABCDEF"
+#     ans = ''
+#     while num > 0:
+#         ans += notation[num % n]
+#         num //= n
+#
+#     return ans[::-1] if ans != '' else '0'
