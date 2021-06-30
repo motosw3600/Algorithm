@@ -1,8 +1,7 @@
-def factorial(n):
+def phibonachi(n):
     if n < 2:
-        return 1
-    return n * factorial(n - 1)
+        return n
 
-N = int(input())
+    return phibonachi(n-1) + phibonachi(n-2)
 
-print(factorial(N))
+print(phibonachi(10))
