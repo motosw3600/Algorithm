@@ -1,7 +1,7 @@
 from collections import defaultdict
 from collections import deque
 
-
+# Dijkstra Algorithm
 def solution(N, road, K):
     answer = [1]
 
