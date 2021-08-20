@@ -24,8 +24,9 @@ for h in house:
 cNum = [i for i in range(len(chicken))]
 combination = list(combinations(cNum, M))
 
-print(distance)
-print(combination)
+for combi in combination:
+    arr = [[dis[c] for c in combi] for dis in distance]
+    arr_sum = sum(list(map(lambda x:min(x), arr)))
+    result = arr_sum if result > arr_sum else result
 
-for data in distance:
-    print(list(map(data, filter(lambda x:x.index == 0))))
+print(result)
