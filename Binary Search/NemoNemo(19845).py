@@ -1,7 +1,8 @@
 import sys
 
 N, Q = map(int, sys.stdin.readline().split())
-arr = [0] + list(map(int, sys.stdin.readline().split()))
+n_list = list(map(int, sys.stdin.readline().split()))
+arr = [0] + n_list
 
 def search(s, e, k):
     while s < e:
@@ -12,15 +13,15 @@ def search(s, e, k):
             e = mid
     return s
 
-def solve():
-    for _ in range(Q):
-        x, y = map(int, sys.stdin.readline().split())
-        tmp = search(1, N, x)
+for i in range(Q):
+    x, y = map(int, sys.stdin.readline().split())
+    tmp = search(1, N, x)
 
-        res = 1 if arr[N] >= x else 0
-        if arr[y] - x < 0 or tmp - y < 0:
-            print(0)
-        else:
-            print(arr[y] - x + tmp - y + res)
+    res = 1 if arr[N] >= x else 0
+    if arr[y] - x < 0 or tmp - y < 0:
+        print(0)
+    else:
+        print(arr[y] - x + tmp - y + res)
 
-solve()
+
+
